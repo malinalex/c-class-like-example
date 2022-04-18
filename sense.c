@@ -24,14 +24,14 @@ static int getAByB(void *self)
   return selfS->svA*selfS->svB;
 }
 
-Sense * SenseNew(sensorType st, int a, int b)
+Sense *SenseNew(sensorType st, int a, int b)
 {
   Sense *new = (Sense *)calloc(1, sizeof(Sense));
-  //Sense new;
 
   new->update = update;
   new->getA = getA;
   new->getAByB = getAByB;
+  
   new->st = st;
   new->svA = a;
   new->svB = b;
